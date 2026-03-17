@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+
+/* NF Bar */
+
+#NFBar { box-sizing: border-box; opacity: 0; transition:opacity 0.5s ease; z-index: 999999; position: fixed; bottom: 0; left: 0; width: 100%; font: inherit; }
+#NFBar.is-open{ opacity: 1; }
+#NFBar * { box-sizing: inherit; margin: 0; padding: 0; border: 0; font-size: 100%; line-height: 1.0; }
+#NFBar *:before, #NFBar *:after { content: none; }
+#NFBar ul { list-style: none; }
+#NFBar img { vertical-align: bottom; }
+
+#NFBar.nf--single .nf-bar { position: relative; }
+#NFBar.nf--single .nf-bar__logo { z-index: 2; position: absolute; right: 12px; bottom: 0; width: 72px; box-shadow: 0 0 2px 0 rgba(0,0,0,0.50); }
+#NFBar.nf--single .nf-bar__tagline { padding: 14px; background-color: #00892f; }
+#NFBar.nf--single .nf-logo {}
+#NFBar.nf--single .nf-tagline { font-family: 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,serif; font-size: 14px; line-height: 16px; color: #fff; }
+
+#NFBar.nf--multi .nf-bar { padding: 0 3.2vw; border-bottom: #00892f solid 44px; }
+#NFBar.nf--multi .nf-bar__logo { margin: 0 auto -44px auto; background-color: #fff; box-shadow: 0 0 2px 0 rgba(0,0,0,0.50); }
+#NFBar.nf--multi .nf-logogroup {
+	display: flex; flex-direction: row; justify-content: center; align-items: center;
+	width: 300px; min-height: 56px; margin-left: auto; margin-right: auto; }
+#NFBar.nf--multi .nf-logogroup__item { margin: 0 5px; }
+#NFBar.nf--multi .nf-logogroup__item:first-child { margin-left: 0; }
+#NFBar.nf--multi .nf-logogroup__item:last-child { margin-right: 0; }
+
+/* NF Footer */
+
+#NFFooter { box-sizing: border-box; padding: 40px 3.2vw; font: inherit; }
+#NFFooter * { box-sizing: inherit; margin: 0; padding: 0; border: 0; font-size: 100%; line-height: 1.0; }
+#NFFooter *:before, #NFFooter *:after { content: none; }
+#NFFooter ul { list-style: none; }
+#NFFooter img { vertical-align: bottom; }
+
+#NFFooter .nf-description { text-align: center; font-size: 14px; line-height: 1.5; }
+#NFFooter .nf-description__inlinelink { text-decoration: underline; }
+
+#NFFooter .nf-bannergroup {
+	display: flex; flex-direction: row; justify-content: center; align-items: center;
+	margin-top: 15px; }
+#NFFooter .nf-bannergroup__item {
+	display: inline-flex; justify-content: center; align-items: center;
+	width: 200px; height: 64px; margin: 5px; background-color: #fff; text-align: center; }
+#NFFooter .nf-bannergroup__item:first-child { margin-left: 0; }
+#NFFooter .nf-bannergroup__item:last-child { margin-right: 0; }
+
+#NFFooter .nf-copyright { margin-top: 15px; text-align: center; font-family: Arial, sans-serif; font-size: 12px; line-height: 1.5; }
+
+@media screen and (max-width: 719px) {
+	#NFFooter .nf-bannergroup { flex-direction: column; }
+	#NFFooter .nf-bannergroup__item { margin-left: 0; margin-right: 0; } /* end */}
+@media screen and (max-width: 479px) {
+	#NFFooter .nf-description { text-align: left; }
+	#NFFooter br { display: none; } /* end */}
+
